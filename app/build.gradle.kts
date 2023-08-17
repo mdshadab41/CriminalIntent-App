@@ -51,4 +51,10 @@ dependencies {
 
     //fragment
     implementation ("androidx.fragment:fragment-ktx:1.4.1")
+
+    //viwModel
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
+
+    //RecyclerView
+    implementation ("androidx.recyclerview:recyclerview:1.3.1")
 }
