@@ -20,9 +20,11 @@ val crimes: StateFlow<List<Crime>>
             crimeRepository.getCrimes().collect{
                 _crimes.value = it
         }
-
     }
 }
+    suspend fun addCrime(crime: Crime){
+        crimeRepository.addCrime(crime)
+    }
 
 
     }
