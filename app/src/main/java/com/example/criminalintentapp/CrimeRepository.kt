@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Room
 import com.example.criminalintentapp.database.CrimeDao
 import com.example.criminalintentapp.database.CrimeDatabase
+import com.example.criminalintentapp.database.migration_1_2
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.flow.Flow
@@ -20,6 +21,7 @@ class CrimeRepository private constructor(context: Context,
             CrimeDatabase::class.java,
             DATABASE_NAME
         )
+        .addMigrations(migration_1_2)
         .build()
 
      fun getCrimes(): Flow<List<Crime>> = database.crimeDao().getCrimes()
